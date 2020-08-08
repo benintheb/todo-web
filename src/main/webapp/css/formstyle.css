@@ -1,0 +1,38 @@
+body{
+	background-color: blanchedalmond;
+    min-width: 1600px;
+}
+.wrapper{
+    margin: 0px 40%;
+    min-width: 20%;
+    text-align: center;
+}
+form{
+	text-align: initial;
+	font-size: 1.2rem;
+}
+input{
+	height: 2rem;
+	margin-top: 4px;
+	vertical-align: middle;
+}
+.btn{
+	background-color: turquoise;
+	float: right;
+	width: 25%;
+	height: 3rem;
+	font-size: 1rem;
+	line-height: 3rem;
+	margin-top: 1.5rem;
+	padding: 0;
+	cursor: pointer;
+}
+.rightButton{
+	margin-left: 1rem;
+	border: 0;
+}
+.backButton{
+	float: left;
+	background-color: white;
+	border: 1px solid slategray;
+}
