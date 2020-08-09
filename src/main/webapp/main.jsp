@@ -7,7 +7,6 @@
         <meta charset="UTF-8">
 		<title>To Do List</title>
         <link rel="stylesheet" type="text/css" href="css/mainstyle.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>  
     </head>
     <body>
         <div class="wrapper">
@@ -23,54 +22,22 @@
             <main id="main">
                 <ul id="listTodo" class="cardSection" style="text-align:center;">
                     <c:forEach var="i" items="${todoIds }">     
-                    	<li id="todoCardNo${i}" class="card">
+                    	<li class="card">
                     		<h4>${todoList[i].title }</h4>
                     		<small>등록날짜: ${todoList[i].regDate.substring(0, 10).replaceAll("-",".")},
 										        ${todoList[i].name}, 우선순위: ${todoList[i].sequence}</small>&nbsp;
 							<button id="btn${todoList[i].id}">></button>
-                    	</li>                     	        	
-                    	<script>
-                    		document.getElementById("btn${todoList[i].id}").addEventListener('click', function(event){
-                    			var id = "${todoList[i].id}";
-                    			var data = 'type='+ "DOING" + '&id='+ id;
-                    			var req = new XMLHttpRequest();
-                    			req.open('POST', '/todo/type');
-                    			req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                    			req.onreadystatechange = function(){
-                    				if(req.readyState === 4 && req.status === 200){
-                    					console.log("success");
-                    					$("body").load("/todo/main");
-                    				}
-                    			}
-                    			req.send(data);
-                    		});
-                    	</script>
+                    	</li>             	        		
                     </c:forEach>
                 </ul>
                 <ul id="listDoing" class="cardSection" style="text-align:center;">
                     <c:forEach var="i" items="${doingIds }">
-                    	<li id="doingCardNo${i}" class="card">
+                    	<li class="card">
                     		<h4>${todoList[i].title }</h4>
                     		<small>등록날짜: ${todoList[i].regDate.substring(0, 10).replaceAll("-",".")},
 												${todoList[i].name}, 우선순위: ${todoList[i].sequence}</small>&nbsp;
 							<button id="btn${todoList[i].id}">></button>
                     	</li>
-                    	<script>
-                    		document.getElementById("btn${todoList[i].id}").addEventListener('click', function(event){
-                    			var id = "${todoList[i].id}";
-                    			var data = 'type='+ "DONE" + '&id='+ id;
-                    			var req = new XMLHttpRequest();
-                    			req.open('POST', '/todo/type');
-                    			req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                    			req.onreadystatechange = function(){
-                    				if(req.readyState === 4 && req.status === 200){
-                    					console.log("success");
-                    					$("body").load("/todo/main");
-                    				}
-                    			}
-                    			req.send(data);
-                    		});
-                    	</script>
                     </c:forEach>
                 </ul>
                 <ul id="listDone" class="cardSection">
@@ -84,5 +51,6 @@
                 </ul>
             </main>
         </div>
+        <script src="./js/mainscript.js"></script>
     </body>
 </html>

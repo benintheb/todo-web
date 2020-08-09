@@ -1,10 +1,10 @@
 body{
 	background-color: blanchedalmond;
-    min-width: 1600px;
+    min-width: 1000px;
 }
 .wrapper{
-    margin: 0px 40%;
-    min-width: 20%;
+    margin: 0px 35%;
+    min-width: 30%;
     text-align: center;
 }
 form{

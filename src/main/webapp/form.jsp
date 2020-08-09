@@ -22,8 +22,9 @@
                	<input id="s2" type="radio" name="sequence" value="2">
                	<label for="sequence" style="font-size:.8rem;">2순위</label>&nbsp;&nbsp;&nbsp;&nbsp;
                	<input id="s3" type="radio" name="sequence" value="3">
-               	<label for="sequence" style="font-size:.8rem;">3순위</label>&nbsp;&nbsp;&nbsp;&nbsp;
-            	<button class="resetBtn rightButton btn" onclick="document.getElementById('todoForm').reset()">내용지우기</button>
+               	<label for="sequence" style="font-size:.8rem;">3순위</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            	<button class="resetBtn rightButton btn" type="reset">내용지우기</button>
             	<input type="submit" class="rightButton btn">
             	<button class="backButton btn" onclick="location.href='/todo/main'">&#60;이전</button>
             </form>

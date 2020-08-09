@@ -42,7 +42,7 @@ public class MainServlet extends HttpServlet {
 		request.setAttribute("todoIds", todo);
 		request.setAttribute("doingIds", doing);
 		request.setAttribute("doneIds", done);
-				
+		
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("/main.jsp");
         requestDispatcher.forward(request, response);
 	}
